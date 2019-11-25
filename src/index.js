@@ -4,6 +4,16 @@
 const util = require('util')
 const mysql = require('mysql')
 
+
+const init = () => {
+  if (!process.env.DB_HOST || !process.env.DB_USER || !process.env.DB_PW || !process.env.DB_TABLE) {
+    console.error('mysql-promisify-pool: Requires env variables: DB_HOST, DB_USER, DB_PW, DB_TABLE');
+    // Wait for manual initialization
+  }
+}
+
+init();
+
 const pool = mysql.createPool({
   connectionLimit: 10,
   host: process.env.DB_HOST,

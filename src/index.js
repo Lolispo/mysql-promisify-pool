@@ -6,8 +6,8 @@ const mysql = require('mysql')
 
 
 const init = () => {
-  if (!process.env.DB_HOST || !process.env.DB_USER || !process.env.DB_PW || !process.env.DB_TABLE) {
-    console.error('mysql-promisify-pool: Requires env variables: DB_HOST, DB_USER, DB_PW, DB_TABLE');
+  if (!process.env.DB_HOST || !process.env.DB_USER || !process.env.DB_PW || !process.env.DB_NAME) {
+    console.error('mysql-promisify-pool: Requires env variables: DB_HOST, DB_USER, DB_PW, DB_NAME');
     // Wait for manual initialization
   }
 }
@@ -19,7 +19,7 @@ const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PW,
-  database: process.env.DB_TABLE
+  database: process.env.DB_NAME
 })
 
 // Ping database to check for common exception errors.

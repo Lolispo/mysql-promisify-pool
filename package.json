@@ -1,0 +1,16 @@
+{
+  "name": "mysql-promisify-pool",
+  "version": "1.0.0",
+  "description": "MySQL promisify package, allow use of mysql package with async await",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "author": "Petter Andersson",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "util": "^0.12.1"
+  }
+}

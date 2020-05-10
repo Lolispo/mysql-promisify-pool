@@ -4,8 +4,14 @@
 const util = require('util')
 const mysql = require('mysql')
 
+let pool = null;
+
+module.exports.getPool = () => {
+  return pool;
+}
+
 const initialize = (DB_HOST, DB_USER, DB_PW, DB_NAME) => {
-  const pool = mysql.createPool({
+  pool = mysql.createPool({
     connectionLimit: 10,
     host: DB_HOST,
     user: DB_USER,

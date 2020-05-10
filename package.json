@@ -1,6 +1,6 @@
 {
   "name": "mysql-promisify-pool",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "MySQL promisify package, allow use of mysql package with async await",
   "main": "src/index.js",
   "types": "src/index.d.ts",
